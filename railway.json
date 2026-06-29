@@ -1,5 +1,6 @@
+
 {
-  "$schema": "https://railway.app/railway.schema.json",
+  "$schema": "https://railway.com/railway.schema.json",
   "build": {
     "builder": "NIXPACKS",
     "buildCommand": "npm install",
@@ -14,7 +15,11 @@
     "healthcheckTimeout": 10,
     "healthcheckInterval": 30,
     "restartPolicyType": "ON_FAILURE",
-    "numReplicas": 1,
+    "multiRegionConfig": {
+      "asia-southeast1-eqsg3a": {
+        "numReplicas": 1
+      }
+    },
     "sleepApplication": false
   },
   "variables": {
